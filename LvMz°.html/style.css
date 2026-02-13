@@ -1,0 +1,206 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* GLOBAL */
+body{
+    font-family:'Montserrat',sans-serif;
+    color:#fff;
+    background:url("fond.jpg") center top no-repeat fixed;
+    background-size:cover;
+    min-height:100vh;
+}
+
+/* OVERLAY */
+.overlay{
+    background:rgba(0,0,0,0.55);
+    min-height:100vh;
+}
+
+/* CONTENEUR CENTRAL */
+.overlay > section,
+.overlay > nav,
+.overlay > footer{
+    max-width:1200px;
+    margin:0 auto;
+    width:100%;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 20px;
+    border-bottom:1px solid rgba(212,175,55,0.3);
+}
+
+/* LOGO NAV */
+.logo-nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo-nav img{
+    width:85px;
+}
+
+.logo-nav span{
+    font-size:26px;
+    font-weight:700;
+    color:#d4af37;
+}
+
+/* MENU */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#d4af37;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:white;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:90px 20px 50px;
+}
+
+.hero-logo{
+    width:280px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#ccc;
+    max-width:650px;
+    margin:0 auto 35px;
+}
+
+/* PRODUITS ACCUEIL */
+.home-products{
+    padding:60px 20px 100px;
+    text-align:center;
+}
+
+.home-products h2{
+    font-family:'Playfair Display',serif;
+    font-size:40px;
+    color:#d4af37;
+    margin-bottom:50px;
+}
+
+/* GRID CENTRÉ */
+.products{
+    display:grid;
+    grid-template-columns:repeat(3, 300px);
+    gap:50px;
+    justify-content:center;
+}
+
+/* CARTE PRODUIT */
+.product{
+    background:rgba(0,0,0,0.7);
+    border:1px solid rgba(212,175,55,0.3);
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+/* IMAGE PRODUIT */
+.product img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    object-position:50% 35%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+/* TEXTE PRODUIT */
+.product h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.product span{
+    font-size:18px;
+    color:#d4af37;
+    font-weight:600;
+}
+
+/* SECTION MARQUE / BOUTIQUE / CONTACT */
+#marque,
+#boutique,
+#contact{
+    padding:90px 20px;
+    text-align:center;
+}
+
+#marque p,
+#boutique p,
+#contact p{
+    max-width:750px;
+    margin:0 auto 20px;
+    line-height:1.7;
+    color:#ccc;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid rgba(212,175,55,0.3);
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+    .products{
+        grid-template-columns:repeat(2, 280px);
+        gap:40px;
+    }
+}
+
+@media(max-width:650px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .hero-logo{
+        width:200px;
+    }
+}
